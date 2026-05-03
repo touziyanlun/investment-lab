@@ -60,6 +60,8 @@ nav:
       - 国产算力10股: research/domestic-computing-10-portfolio-2026-05.md
       - 红利组合: research/dividend-portfolio-2026-05.md
   - 行业分析: analysis.md
+  - 事件分析:
+      - 2026年巴菲特股东大会: research/buffett-brk-2026-shareholder-meeting.md
   - 个股研究:
       - 台积电 TSMC (TSM): research/tsmc-tsm-deep-dive-2026-05.md
       - 英伟达 NVIDIA (NVDA): research/nvidia-nvda-deep-dive-2026-05.md
