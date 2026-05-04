@@ -1,5 +1,5 @@
 site_name: 投资严论 · The Rigorous Investor
-site_description: 投资严论 · The Rigorous Investor
+site_description: 多资产长期价值投资独立研究 — 遵循芒格多元思维模型与巴菲特价值投资理念
 site_url: https://touziyanlun.github.io/investment-lab/
 repo_name: touziyanlun/investment-lab
 repo_url: https://github.com/touziyanlun/investment-lab
@@ -60,22 +60,23 @@ nav:
       - 国产算力10股: research/domestic-computing-10-portfolio-2026-05.md
       - 红利组合: research/dividend-portfolio-2026-05.md
   - 行业分析:
-      - 半导体 ETF 与指数: analysis.md
-      - 国产 GPU 全面对比: research/china-gpu-comprehensive-comparison-2026-05.md
+      - 全球半导体赛道9家: research/semiconductor-sector-deep-dive-2026-05.md
       - 全球存储产业链: research/global-storage-industry-full-chain-analysis-2026-05.md
+      - 国产 GPU 全面对比: research/china-gpu-comprehensive-comparison-2026-05.md
+      - ETF 绩效与指数相关性: analysis.md
   - 事件分析:
       - 2026年巴菲特股东大会: research/buffett-brk-2026-shareholder-meeting.md
   - 个股研究:
       - 台积电 TSMC (TSM): research/tsmc-tsm-deep-dive-2026-05.md
       - 英伟达 NVIDIA (NVDA): research/nvidia-nvda-deep-dive-2026-05.md
       - 谷歌 Google (GOOGL): research/google-googl-deep-dive-2026-05.md
+      - 闪迪 SanDisk (SNDK): research/sandisk-sndk-deep-dive-2026-05.md
       - 美光科技 Micron (MU): research/micron-mu-deep-dive-2026-05.md
       - SK海力士 (000660): research/sk-hynix-000660-deep-dive-2026-05.md
       - 三星电子 (005930): research/samsung-005930-deep-dive-2026-05.md
       - 中际旭创 (300308): research/zhongji-innolight-300308-deep-dive-2026-05.md
       - 中芯国际 (0981.HK): research/smic-0981hk-deep-dive-2026-05.md
       - 华虹半导体 (1347.HK): research/huahong-1347hk-deep-dive-2026-05.md
-      - 闪迪 SanDisk (SNDK): research/sandisk-sndk-deep-dive-2026-05.md
       - 贵州茅台 (600519): research/moutai-600519-deep-dive-2026-05.md
       - 海光信息 (688041): research/hygon-688041-deep-dive-2026-05.md
       - 摩尔线程 (688795): research/moore-threads-688795-deep-dive-2026-05.md

@@ -15,16 +15,19 @@
 
 ## 当前研究覆盖
 
-| 赛道 | 标的 | 最新报告 |
-|------|------|---------|
-| 消费 | 贵州茅台 (600519) | [深度研究](research/moutai-600519-deep-dive-2026-05.md) |
-| 科技/半导体 | 海光信息 (688041) | [深度研究](research/hygon-688041-deep-dive-2026-05.md) |
-| 科技/半导体 | 摩尔线程 (688795) | [深度研究](research/moore-threads-688795-deep-dive-2026-05.md) |
-| 科技/半导体 | 英伟达 NVDA | [深度研究](research/nvidia-nvda-deep-dive-2026-05.md) |
-| 科技/半导体 | 台积电 TSM | [深度研究](research/tsmc-tsm-deep-dive-2026-05.md) |
-| 科技/存储 | 闪迪 SanDisk (SNDK) | [深度研究](research/sandisk-sndk-deep-dive-2026-05.md) |
-| 投资组合 | 红利股10只组合 | [构建与回测](research/dividend-portfolio-2026-05.md) |
-| 宏观 | 宏观快报 | [2026年5月](research/macro-briefing-2026-05.md) |
+**24 份研报 · 30+ 标的 · 5 条赛道**
+
+| 维度 | 报告 | 覆盖 |
+|------|------|------|
+| 宏观 | [2026年5月快报](research/macro-briefing-2026-05.md) | 中美利差 · 汇率 · 流动性 · 地缘 |
+| 行业 | [半导体赛道9家全景](research/semiconductor-sector-deep-dive-2026-05.md) | NVDA · TSM · 三星 · SK海力士 · 美光 · 中芯 · 华虹 · 中际旭创 · 谷歌 |
+| 行业 | [全球存储产业链](research/global-storage-industry-full-chain-analysis-2026-05.md) | DRAM · NAND · HDD · 控制器 · 模组 · 设备 · 材料 · 云端 |
+| 行业 | [国产 GPU 全面对比](research/china-gpu-comprehensive-comparison-2026-05.md) | 华为昇腾 · 海光 · 寒武纪 · 摩尔线程 · 沐曦 · 壁仞等 11 家 |
+| 组合 | [AI 智能体 20 成长股](research/ai-agent-20-portfolio-2026-05.md) | 美股 82% + A股 10% + 韩股 4% + 台湾 4% |
+| 组合 | [国产算力 10 股](research/domestic-computing-10-portfolio-2026-05.md) | AI芯片 · 服务器 · 光模块 · 液冷 · 端侧 |
+| 组合 | [红利组合 10 只](research/dividend-portfolio-2026-05.md) | 水电 · 银行 · 白酒 · 电信 · 能源 · 高速 · 铁路 · 石化 · 家电 · 乳业 |
+| 个股 | 13 篇独立深度研究 | 茅台 · 海光 · 摩尔线程 · 闪迪 · TSMC · NVDA · GOOGL · MU · SK海力士 · 三星 · 中际旭创 · 中芯国际 · 华虹 |
+| 事件 | [巴菲特股东大会 2026](research/buffett-brk-2026-shareholder-meeting.md) | BRK · Greg Abel 交接 · 现金 3970 亿 |
 
 ## 芒格思维模型在投资研究中的应用
 

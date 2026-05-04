@@ -79,7 +79,7 @@
 
 - **预览**：`mkdocs serve` → http://localhost:8000
 - **构建**：`mkdocs build` → `site/`
-- **部署**：`git push` → GitHub Actions 自动部署到 `fanglk.github.io/investment-lab/`
+- **部署**：`git push` → GitHub Actions 自动部署到 `touziyanlun.github.io/investment-lab/`
 - **配置**：`mkdocs.yml`（导航栏在 `nav:` 节点）
 
 ## 项目结构

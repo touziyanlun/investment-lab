@@ -14,6 +14,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
+import os
 
 # ============================================================
 # 0. 参数设置
@@ -238,7 +239,7 @@ ax4.axhline(y=0, color="black", lw=0.5)
 ax4.grid(True, alpha=0.3, axis="y")
 
 plt.tight_layout()
-output_path = "../research/semiconductor_etf_comparison.png"
+output_path = os.path.join(os.path.dirname(__file__), "..", "research", "semiconductor_etf_comparison.png")
 fig.savefig(output_path, dpi=150, bbox_inches="tight")
 print(f"   ✓ 图表已保存: research/semiconductor_etf_comparison.png")
 

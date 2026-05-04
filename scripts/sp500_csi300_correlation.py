@@ -12,6 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 import akshare as ak
+import os
 
 # ============================================================
 # 0. 网络配置 — 绕过不稳定的系统代理
@@ -184,7 +185,7 @@ ax2.set_ylim(-0.6, 0.8)
 ax2.grid(True, alpha=0.3)
 
 plt.tight_layout()
-output_path = "../research/sp500_csi300_correlation.png"
+output_path = os.path.join(os.path.dirname(__file__), "..", "research", "sp500_csi300_correlation.png")
 fig.savefig(output_path, dpi=150, bbox_inches="tight")
 print(f"   ✓ 图表已保存: research/sp500_csi300_correlation.png")
 
