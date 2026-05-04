@@ -59,7 +59,9 @@ nav:
       - AI智能体20成长股: research/ai-agent-20-portfolio-2026-05.md
       - 国产算力10股: research/domestic-computing-10-portfolio-2026-05.md
       - 红利组合: research/dividend-portfolio-2026-05.md
-  - 行业分析: analysis.md
+  - 行业分析:
+      - 半导体 ETF 与指数: analysis.md
+      - 国产 GPU 全面对比: research/china-gpu-comprehensive-comparison-2026-05.md
   - 事件分析:
       - 2026年巴菲特股东大会: research/buffett-brk-2026-shareholder-meeting.md
   - 个股研究:
