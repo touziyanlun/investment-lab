@@ -192,6 +192,14 @@ def md_to_wechat(md_text: str) -> str:
         result.append(f"<p>{text}</p>")
         i += 1
 
+    # 追加免责声明
+    result.append("<hr>")
+    result.append(
+        '<p style="font-size:12px;color:#999;">免责声明：本报告仅供信息参考，'
+        "不构成投资建议。投资有风险，入市需谨慎。"
+        '更多深度研究请访问 <a href="https://touziyanlun.github.io/investment-lab/">touziyanlun.github.io/investment-lab</a></p>'
+    )
+
     return "\n".join(result)
 
 
