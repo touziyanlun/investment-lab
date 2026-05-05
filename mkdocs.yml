@@ -52,7 +52,9 @@ plugins:
       lang: zh
 
 nav:
-  - 首页: index.md
+  - 首页:
+      - 关于本站: index.md
+      - 更新时间线: timeline.md
   - 宏观快报:
       - 2026年5月: research/macro-briefing-2026-05.md
   - 投资组合:
