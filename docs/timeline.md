@@ -1,64 +1,245 @@
-# 更新时间线
+<style>
+  .tl-wrapper {
+    --gold: #c9a95c;
+    --steel: #4a90d9;
+    --steel-bright: #64b5f6;
+    --ice: #e8edf2;
+    --ice-dim: #b0bec5;
+    max-width: 860px;
+    margin: 0 auto;
+  }
 
-按时间倒序展示所有研究报告的发布记录。
+  .tl-hero {
+    padding: 32px 0 24px;
+    border-bottom: 1px solid rgba(74,144,217,0.1);
+    margin-bottom: 32px;
+    animation: tlFadeUp 0.6s ease;
+  }
+  .tl-hero h1 {
+    font-family: Georgia, 'Noto Serif SC', serif !important;
+    font-size: 48px !important;
+    font-weight: 400 !important;
+    color: var(--ice) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.03em !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .tl-hero-sub {
+    font-size: 14px;
+    color: var(--ice-dim);
+    letter-spacing: 0.02em;
+    margin-top: 4px;
+  }
 
----
+  .tl-month {
+    margin-bottom: 28px;
+    animation: tlFadeUp 0.6s ease both;
+  }
 
-## 2026年5月
+  .tl-month h2 {
+    font-family: Georgia, serif !important;
+    font-weight: 400 !important;
+    border: none !important;
+    padding-left: 0 !important;
+    font-size: 1.35em !important;
+    color: var(--gold) !important;
+    margin-bottom: 12px !important;
+  }
+  .tl-month h2::after {
+    content: '';
+    display: block;
+    width: 40px; height: 2px;
+    background: var(--gold);
+    margin-top: 6px;
+    opacity: 0.5;
+  }
 
-### 5月5日
+  .tl-day-group {
+    margin-bottom: 20px;
+  }
+  .tl-day-group h3 {
+    font-size: 0.95em !important;
+    color: var(--steel-bright) !important;
+    margin-bottom: 8px !important;
+    font-weight: 500 !important;
+  }
 
-| 报告 | 类型 | 路径 |
-|------|:----:|------|
-| 五一假期宏观深度复盘 | 宏观 | [:octicons-link-external-16:](research/macro-mayday-2026-05.md) |
-| 澜起科技 (688008) 深度研究 | 个股 | [:octicons-link-external-16:](research/montage-688008-deep-dive-2026-05.md) |
-| 阿里巴巴 (9988.HK) 深度研究 | 个股 | [:octicons-link-external-16:](research/alibaba-baba-deep-dive-2026-05.md) |
+  .tl-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.89em;
+  }
+  .tl-table thead th {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #5c6e84;
+    font-weight: 500;
+    padding: 0 12px 8px;
+    text-align: left;
+  }
+  .tl-table thead th:last-child { text-align: center; }
+  .tl-table thead th:first-child { text-align: center; width: 50px; }
 
-### 5月4日
+  .tl-table tbody td {
+    padding: 7px 12px;
+    color: var(--ice-dim);
+    border-bottom: 1px solid rgba(74,144,217,0.05);
+    transition: background 0.2s;
+  }
+  .tl-table tbody tr:hover td {
+    background: rgba(74,144,217,0.04);
+  }
+  .tl-table tbody td:first-child {
+    text-align: center;
+    font-size: 0.78em;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+  .tl-table tbody td:last-child { text-align: center; }
+  .tl-table a {
+    color: var(--steel) !important;
+    border: none !important;
+    text-decoration: none;
+  }
+  .tl-table a:hover { color: var(--steel-bright) !important; }
 
-| 报告 | 类型 | 路径 |
-|------|:----:|------|
-| 全球存储产业链 | 行业 | [:octicons-link-external-16:](research/global-storage-industry-full-chain-analysis-2026-05.md) |
-| 国产 GPU 全面对比 | 行业 | [:octicons-link-external-16:](research/china-gpu-comprehensive-comparison-2026-05.md) |
+  .tl-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(74,144,217,0.06);
+    border: 1px solid rgba(74,144,217,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 32px 0 16px;
+    animation: tlFadeUp 0.6s ease 0.3s both;
+  }
+  .tl-stat {
+    background: rgba(13,31,53,0.5);
+    padding: 20px 16px;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  .tl-stat:hover { background: rgba(17,40,64,0.6); }
+  .tl-stat-num {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+  .tl-stat-label {
+    font-size: 10px;
+    color: var(--ice-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 
-### 5月3日
+  @keyframes tlFadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-| 报告 | 类型 | 路径 |
-|------|:----:|------|
-| 2026年巴菲特股东大会 | 事件 | [:octicons-link-external-16:](research/buffett-brk-2026-shareholder-meeting.md) |
+  @media (max-width: 768px) {
+    .tl-hero h1 { font-size: 32px !important; }
+    .tl-stats { grid-template-columns: repeat(2, 1fr); }
+    .tl-table { font-size: 0.8em; }
+  }
+</style>
 
-### 5月1日
+<div class="tl-wrapper">
 
-| 报告 | 类型 | 路径 |
-|------|:----:|------|
-| 台积电 TSMC (TSM) 深度研究 | 个股 | [:octicons-link-external-16:](research/tsmc-tsm-deep-dive-2026-05.md) |
-| 英伟达 NVIDIA (NVDA) 深度研究 | 个股 | [:octicons-link-external-16:](research/nvidia-nvda-deep-dive-2026-05.md) |
-| 谷歌 Google (GOOGL) 深度研究 | 个股 | [:octicons-link-external-16:](research/google-googl-deep-dive-2026-05.md) |
-| 闪迪 SanDisk (SNDK) 深度研究 | 个股 | [:octicons-link-external-16:](research/sandisk-sndk-deep-dive-2026-05.md) |
-| 美光科技 Micron (MU) 深度研究 | 个股 | [:octicons-link-external-16:](research/micron-mu-deep-dive-2026-05.md) |
-| SK海力士 (000660) 深度研究 | 个股 | [:octicons-link-external-16:](research/sk-hynix-000660-deep-dive-2026-05.md) |
-| 三星电子 (005930) 深度研究 | 个股 | [:octicons-link-external-16:](research/samsung-005930-deep-dive-2026-05.md) |
-| 中际旭创 (300308) 深度研究 | 个股 | [:octicons-link-external-16:](research/zhongji-innolight-300308-deep-dive-2026-05.md) |
-| 中芯国际 (0981.HK) 深度研究 | 个股 | [:octicons-link-external-16:](research/smic-0981hk-deep-dive-2026-05.md) |
-| 华虹半导体 (1347.HK) 深度研究 | 个股 | [:octicons-link-external-16:](research/huahong-1347hk-deep-dive-2026-05.md) |
-| 贵州茅台 (600519) 深度研究 | 个股 | [:octicons-link-external-16:](research/moutai-600519-deep-dive-2026-05.md) |
-| 海光信息 (688041) 深度研究 | 个股 | [:octicons-link-external-16:](research/hygon-688041-deep-dive-2026-05.md) |
-| 摩尔线程 (688795) 深度研究 | 个股 | [:octicons-link-external-16:](research/moore-threads-688795-deep-dive-2026-05.md) |
-| 全球半导体赛道9家 | 行业 | [:octicons-link-external-16:](research/semiconductor-sector-deep-dive-2026-05.md) |
-| AI智能体20成长股 | 组合 | [:octicons-link-external-16:](research/ai-agent-20-portfolio-2026-05.md) |
-| 国产算力10股 | 组合 | [:octicons-link-external-16:](research/domestic-computing-10-portfolio-2026-05.md) |
-| 红利组合 | 组合 | [:octicons-link-external-16:](research/dividend-portfolio-2026-05.md) |
-| 2026年5月宏观快报 | 宏观 | [:octicons-link-external-16:](research/macro-briefing-2026-05.md) |
+<div class="tl-hero">
+  <h1>更新时间线</h1>
+  <div class="tl-hero-sub">按时间倒序展示所有研究报告的发布记录</div>
+</div>
 
----
+<div class="tl-month" style="animation-delay:0.08s">
+<h2>2026年5月</h2>
 
-## 统计
+<div class="tl-day-group">
+<h3>5月5日</h3>
+<table class="tl-table">
+<thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
+<tbody>
+<tr><td>宏观</td><td>五一假期宏观深度复盘</td><td><a href="research/macro-mayday-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>澜起科技 (688008) 深度研究</td><td><a href="research/montage-688008-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>阿里巴巴 (9988.HK) 深度研究</td><td><a href="research/alibaba-baba-deep-dive-2026-05.md">→</a></td></tr>
+</tbody>
+</table>
+</div>
 
-| 类别 | 数量 |
-|------|:----:|
-| 宏观快报 | 2 |
-| 行业分析 | 3 |
-| 投资组合 | 3 |
-| 事件分析 | 1 |
-| 个股深度研究 | 16 |
-| **合计** | **25** |
+<div class="tl-day-group">
+<h3>5月4日</h3>
+<table class="tl-table">
+<thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
+<tbody>
+<tr><td>行业</td><td>全球存储产业链</td><td><a href="research/global-storage-industry-full-chain-analysis-2026-05.md">→</a></td></tr>
+<tr><td>行业</td><td>国产 GPU 全面对比</td><td><a href="research/china-gpu-comprehensive-comparison-2026-05.md">→</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tl-day-group">
+<h3>5月3日</h3>
+<table class="tl-table">
+<thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
+<tbody>
+<tr><td>事件</td><td>2026年巴菲特股东大会</td><td><a href="research/buffett-brk-2026-shareholder-meeting.md">→</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tl-day-group">
+<h3>5月1日</h3>
+<table class="tl-table">
+<thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
+<tbody>
+<tr><td>个股</td><td>台积电 TSMC (TSM) 深度研究</td><td><a href="research/tsmc-tsm-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>英伟达 NVIDIA (NVDA) 深度研究</td><td><a href="research/nvidia-nvda-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>谷歌 Google (GOOGL) 深度研究</td><td><a href="research/google-googl-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>闪迪 SanDisk (SNDK) 深度研究</td><td><a href="research/sandisk-sndk-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>美光科技 Micron (MU) 深度研究</td><td><a href="research/micron-mu-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>SK海力士 (000660) 深度研究</td><td><a href="research/sk-hynix-000660-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>三星电子 (005930) 深度研究</td><td><a href="research/samsung-005930-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>中际旭创 (300308) 深度研究</td><td><a href="research/zhongji-innolight-300308-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>中芯国际 (0981.HK) 深度研究</td><td><a href="research/smic-0981hk-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>华虹半导体 (1347.HK) 深度研究</td><td><a href="research/huahong-1347hk-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>贵州茅台 (600519) 深度研究</td><td><a href="research/moutai-600519-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>海光信息 (688041) 深度研究</td><td><a href="research/hygon-688041-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>摩尔线程 (688795) 深度研究</td><td><a href="research/moore-threads-688795-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>行业</td><td>全球半导体赛道9家</td><td><a href="research/semiconductor-sector-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>组合</td><td>AI智能体20成长股</td><td><a href="research/ai-agent-20-portfolio-2026-05.md">→</a></td></tr>
+<tr><td>组合</td><td>国产算力10股</td><td><a href="research/domestic-computing-10-portfolio-2026-05.md">→</a></td></tr>
+<tr><td>组合</td><td>红利组合</td><td><a href="research/dividend-portfolio-2026-05.md">→</a></td></tr>
+<tr><td>宏观</td><td>2026年5月宏观快报</td><td><a href="research/macro-briefing-2026-05.md">→</a></td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="tl-stats">
+  <div class="tl-stat">
+    <div class="tl-stat-num">2</div>
+    <div class="tl-stat-label">宏观快报</div>
+  </div>
+  <div class="tl-stat">
+    <div class="tl-stat-num">4</div>
+    <div class="tl-stat-label">行业分析</div>
+  </div>
+  <div class="tl-stat">
+    <div class="tl-stat-num">3</div>
+    <div class="tl-stat-label">投资组合</div>
+  </div>
+  <div class="tl-stat">
+    <div class="tl-stat-num">16</div>
+    <div class="tl-stat-label">个股深度</div>
+  </div>
+</div>
+
+</div>

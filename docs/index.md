@@ -1,64 +1,372 @@
-# 投资严论 · The Rigorous Investor
+<style>
+  .idx-wrapper {
+    --gold: #c9a95c;
+    --gold-bright: #e0c878;
+    --steel: #4a90d9;
+    --steel-bright: #64b5f6;
+    --ice: #e8edf2;
+    --ice-dim: #b0bec5;
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-多资产长期价值投资独立研究。
+  .idx-hero {
+    padding: 36px 0 28px;
+    border-bottom: 1px solid rgba(74,144,217,0.1);
+    margin-bottom: 32px;
+    animation: idxFadeUp 0.6s ease;
+  }
+  .idx-hero-tag {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .idx-hero h1 {
+    font-family: Georgia, 'Noto Serif SC', serif !important;
+    font-size: 54px !important;
+    font-weight: 400 !important;
+    color: var(--ice) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.03em !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 8px 0 !important;
+  }
+  .idx-hero-sub {
+    font-size: 15px;
+    color: var(--ice-dim);
+    letter-spacing: 0.01em;
+  }
 
-## 投资哲学
+  .idx-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(74,144,217,0.08);
+    border: 1px solid rgba(74,144,217,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 36px;
+    animation: idxFadeUp 0.6s ease 0.1s both;
+  }
+  .idx-stat {
+    background: rgba(13,31,53,0.5);
+    padding: 22px 16px;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  .idx-stat:hover { background: rgba(17,40,64,0.7); }
+  .idx-stat-num {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .idx-stat-label {
+    font-size: 10px;
+    color: var(--ice-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 
-遵循 **查理·芒格** 的多元思维模型与 **沃伦·巴菲特** 的价值投资理念：
+  .idx-section-title {
+    font-family: Georgia, 'Noto Serif SC', serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--ice);
+    margin: 36px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: idxFadeUp 0.6s ease both;
+  }
+  .idx-section-title::before {
+    content: '';
+    display: inline-block;
+    width: 7px; height: 7px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
 
-> "手里拿着锤子的人，看什么都像钉子。" —— 查理·芒格
+  .idx-philosophy {
+    background: rgba(74,144,217,0.03);
+    border-left: 2px solid var(--gold);
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    border-radius: 0 4px 4px 0;
+    animation: idxFadeUp 0.6s ease 0.12s both;
+  }
+  .idx-philosophy p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--ice-dim);
+    margin: 0;
+    font-style: italic;
+  }
+  .idx-philosophy .attribution {
+    font-size: 11px;
+    color: #8a7038;
+    margin-top: 6px;
+    font-style: normal;
+    letter-spacing: 0.04em;
+  }
 
-- 运用**多元思维模型**（心理学、经济学、工程学、生物学）理解商业本质，避免单一学科视角
-- 寻找有深厚护城河的优质企业，以合理价格买入并长期持有
-- **反过来想，总是反过来想** —— 每笔投资先假设它会归零，找出最可能的死因
-- 聚焦消费 / 科技 / 能源 / 金融赛道，能力圈内深度研究
+  .idx-coverage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 32px;
+    animation: idxFadeUp 0.6s ease 0.18s both;
+  }
+  .idx-cov-card {
+    background: rgba(13,31,53,0.5);
+    border: 1px solid rgba(74,144,217,0.07);
+    border-radius: 4px;
+    padding: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .idx-cov-card:hover {
+    border-color: rgba(74,144,217,0.25);
+    transform: translateY(-2px);
+  }
+  .idx-cov-icon {
+    font-size: 18px;
+    margin-bottom: 8px;
+    opacity: 0.6;
+  }
+  .idx-cov-label {
+    font-size: 11px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+  }
+  .idx-cov-body {
+    font-size: 12px;
+    color: var(--ice-dim);
+    line-height: 1.6;
+  }
 
-## 当前研究覆盖
+  .idx-models {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 36px;
+    animation: idxFadeUp 0.6s ease 0.24s both;
+  }
+  .idx-model {
+    display: flex;
+    gap: 10px;
+    padding: 14px 16px;
+    background: rgba(13,31,53,0.4);
+    border: 1px solid rgba(74,144,217,0.05);
+    border-radius: 4px;
+    transition: border-color 0.2s;
+  }
+  .idx-model:hover { border-color: rgba(201,169,92,0.2); }
+  .idx-model-icon {
+    flex-shrink: 0;
+    width: 26px; height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(201,169,92,0.08);
+    border-radius: 2px;
+    font-size: 12px;
+    color: var(--gold);
+  }
+  .idx-model-body h4 {
+    font-size: 12px;
+    color: var(--ice);
+    font-weight: 600;
+    margin: 0 0 2px;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .idx-model-body p {
+    font-size: 11px;
+    color: var(--ice-dim);
+    line-height: 1.45;
+    margin: 0;
+  }
 
-**24 份研报 · 30+ 标的 · 5 条赛道**
+  .idx-declare {
+    padding: 18px 24px;
+    border: 1px dashed rgba(74,144,217,0.12);
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 32px;
+    animation: idxFadeUp 0.6s ease 0.3s both;
+  }
+  .idx-declare p {
+    font-size: 12px;
+    color: #5c6e84;
+    margin: 0;
+    line-height: 1.7;
+  }
 
-| 维度 | 报告 | 覆盖 |
-|------|------|------|
-| 宏观 | [2026年5月快报](research/macro-briefing-2026-05.md) | 中美利差 · 汇率 · 流动性 · 地缘 |
-| 行业 | [半导体赛道9家全景](research/semiconductor-sector-deep-dive-2026-05.md) | NVDA · TSM · 三星 · SK海力士 · 美光 · 中芯 · 华虹 · 中际旭创 · 谷歌 |
-| 行业 | [全球存储产业链](research/global-storage-industry-full-chain-analysis-2026-05.md) | DRAM · NAND · HDD · 控制器 · 模组 · 设备 · 材料 · 云端 |
-| 行业 | [国产 GPU 全面对比](research/china-gpu-comprehensive-comparison-2026-05.md) | 华为昇腾 · 海光 · 寒武纪 · 摩尔线程 · 沐曦 · 壁仞等 11 家 |
-| 组合 | [AI 智能体 20 成长股](research/ai-agent-20-portfolio-2026-05.md) | 美股 82% + A股 10% + 韩股 4% + 台湾 4% |
-| 组合 | [国产算力 10 股](research/domestic-computing-10-portfolio-2026-05.md) | AI芯片 · 服务器 · 光模块 · 液冷 · 端侧 |
-| 组合 | [红利组合 10 只](research/dividend-portfolio-2026-05.md) | 水电 · 银行 · 白酒 · 电信 · 能源 · 高速 · 铁路 · 石化 · 家电 · 乳业 |
-| 个股 | 13 篇独立深度研究 | 茅台 · 海光 · 摩尔线程 · 闪迪 · TSMC · NVDA · GOOGL · MU · SK海力士 · 三星 · 中际旭创 · 中芯国际 · 华虹 |
-| 事件 | [巴菲特股东大会 2026](research/buffett-brk-2026-shareholder-meeting.md) | BRK · Greg Abel 交接 · 现金 3970 亿 |
+  .idx-game-link {
+    text-align: center;
+    padding: 16px;
+    background: rgba(13,31,53,0.4);
+    border: 1px solid rgba(74,144,217,0.07);
+    border-radius: 4px;
+    animation: idxFadeUp 0.6s ease 0.35s both;
+    transition: border-color 0.2s;
+  }
+  .idx-game-link:hover { border-color: rgba(74,144,217,0.25); }
+  .idx-game-link a {
+    font-size: 13px;
+    color: var(--steel-bright) !important;
+    border: none !important;
+  }
 
-## 芒格思维模型在投资研究中的应用
+  @keyframes idxFadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-本站每份深度研究都刻意运用芒格的多元思维模型框架：
+  @media (max-width: 768px) {
+    .idx-hero h1 { font-size: 34px !important; }
+    .idx-stats { grid-template-columns: repeat(2, 1fr); }
+    .idx-coverage { grid-template-columns: 1fr; }
+    .idx-models { grid-template-columns: 1fr; }
+  }
+</style>
 
-| 思维模型 | 在研究中的应用 |
-|----------|------|
-| **逆向思维** | Pre-mortem：假设3年后这笔投资归零，最可能的死因是什么？ |
-| **心理学（误判心理学）** | 识别确认偏误、近期偏差、叙事谬误——在"分析纪律"中内置了反向验证机制 |
-| **生态系统分析** | 护城河+竞争对手+行业周期的三维分析，理解企业在其生态系统中的位置 |
-| **安全边际** | 估值必须用至少两种方法交叉验证，合理买入区间留有足够折扣 |
-| **能力圈** | 只研究能理解的商业模式，行业偏好公开声明，赛道集中度超50%自动预警 |
-| **复利思维** | 分红再投资的长周期回测，关注5年以上的累积效应而非短期波动 |
+<div class="idx-wrapper">
 
-## 分析框架
+<div class="idx-hero">
+  <div class="idx-hero-tag">The Rigorous Investor</div>
+  <h1>投资严论</h1>
+  <div class="idx-hero-sub">多资产长期价值投资独立研究</div>
+</div>
 
-每只股票覆盖八个维度：
+<div class="idx-stats">
+  <div class="idx-stat">
+    <div class="idx-stat-num">25</div>
+    <div class="idx-stat-label">深度研报</div>
+  </div>
+  <div class="idx-stat">
+    <div class="idx-stat-num">30+</div>
+    <div class="idx-stat-label">覆盖标的</div>
+  </div>
+  <div class="idx-stat">
+    <div class="idx-stat-num">5</div>
+    <div class="idx-stat-label">研究赛道</div>
+  </div>
+  <div class="idx-stat">
+    <div class="idx-stat-num">8</div>
+    <div class="idx-stat-label">分析维度</div>
+  </div>
+</div>
 
-1. **商业模式** — 怎么赚钱？收入结构、客户粘性
-2. **护城河** — 为什么对手抢不走生意？护城河在变宽还是变窄？
-3. **竞争对手** — 行业格局、份额变化
-4. **行业周期** — 处于周期的什么位置？
-5. **催化剂与风险** — 未来 1-3 年的关键变量
-6. **估值** — 定量 DCF/PE/可比估值，给出合理区间
-7. **管理层与治理** — 资本配置能力、诚信、股权结构
-8. **逆向验证** — 假设3年后归零，最可能的死因是什么？
+<div class="idx-section-title">投资哲学</div>
 
-## 声明
+<div class="idx-philosophy">
+  <p>"手里拿着锤子的人，看什么都像钉子。聪明人为什么会犯错？因为他们没有把所有的核心思维模型——来自多个学科的重大思想——都列成清单来用。"</p>
+  <p class="attribution">—— 查理·芒格</p>
+</div>
 
-本站所有内容仅供个人投资研究参考，不构成投资建议。研究框架学习自查理·芒格的多元思维模型理论，错误和偏见归研究者本人。
+<p style="font-size:14px;color:var(--ice-dim);line-height:1.8;margin-bottom:24px;">
+遵循<b style="color:var(--ice)">芒格多元思维模型</b>与<b style="color:var(--ice)">巴菲特价值投资</b>理念。
+运用心理学、经济学、工程学、生物学多学科视角理解商业本质。
+寻找有深厚护城河的优质企业，以合理价格买入并长期持有。
+<b style="color:#c9a95c">反过来想，总是反过来想</b>——每笔投资先假设它会归零。
+</p>
 
-## 🎮 小游戏
+<div class="idx-section-title">研究覆盖</div>
 
-[贪吃蛇](games/snake/) — 经典街机小游戏，手机触屏也能玩
+<div class="idx-coverage">
+  <div class="idx-cov-card">
+    <div class="idx-cov-icon">◆</div>
+    <div class="idx-cov-label">宏观快报</div>
+    <div class="idx-cov-body">中美利差 · 汇率 · 全球流动性 · 关税/出口管制 —— 每季度更新</div>
+  </div>
+  <div class="idx-cov-card">
+    <div class="idx-cov-icon">◈</div>
+    <div class="idx-cov-label">行业分析</div>
+    <div class="idx-cov-body">半导体赛道 · 存储产业链 · 国产GPU · CPU周期 · ETF对比</div>
+  </div>
+  <div class="idx-cov-card">
+    <div class="idx-cov-icon">⟐</div>
+    <div class="idx-cov-label">投资组合</div>
+    <div class="idx-cov-body">AI智能体20股 · 国产算力10股 · 红利组合10只</div>
+  </div>
+  <div class="idx-cov-card">
+    <div class="idx-cov-icon">◎</div>
+    <div class="idx-cov-label">个股深度</div>
+    <div class="idx-cov-body">NVDA · TSM · GOOGL · MU · 茅台 · 海光 · 中芯 · 三星等 16 篇</div>
+  </div>
+  <div class="idx-cov-card">
+    <div class="idx-cov-icon">⟲</div>
+    <div class="idx-cov-label">事件分析</div>
+    <div class="idx-cov-body">巴菲特股东大会 2026 · 更多事件驱动研究</div>
+  </div>
+  <div class="idx-cov-card">
+    <div class="idx-cov-icon">◉</div>
+    <div class="idx-cov-label">数据工具</div>
+    <div class="idx-cov-body">Python 量化分析 · ETF 绩效对比 · 相关性矩阵 · 回测引擎</div>
+  </div>
+</div>
+
+<div class="idx-section-title">芒格思维模型实践</div>
+
+<div class="idx-models">
+  <div class="idx-model">
+    <div class="idx-model-icon">⟲</div>
+    <div class="idx-model-body">
+      <h4>逆向思维</h4>
+      <p>Pre-mortem：假设3年后归零</p>
+    </div>
+  </div>
+  <div class="idx-model">
+    <div class="idx-model-icon">⟐</div>
+    <div class="idx-model-body">
+      <h4>误判心理学</h4>
+      <p>确认偏误 · 叙事谬误防御</p>
+    </div>
+  </div>
+  <div class="idx-model">
+    <div class="idx-model-icon">◈</div>
+    <div class="idx-model-body">
+      <h4>生态系统分析</h4>
+      <p>护城河 + 竞争 + 周期三维透视</p>
+    </div>
+  </div>
+  <div class="idx-model">
+    <div class="idx-model-icon">◆</div>
+    <div class="idx-model-body">
+      <h4>安全边际</h4>
+      <p>双方法估值交叉验证</p>
+    </div>
+  </div>
+  <div class="idx-model">
+    <div class="idx-model-icon">◉</div>
+    <div class="idx-model-body">
+      <h4>能力圈</h4>
+      <p>只研究可理解的商业模式</p>
+    </div>
+  </div>
+  <div class="idx-model">
+    <div class="idx-model-icon">◎</div>
+    <div class="idx-model-body">
+      <h4>复利思维</h4>
+      <p>5年以上长周期累积效应</p>
+    </div>
+  </div>
+</div>
+
+<div class="idx-declare">
+  <p>本站所有内容仅供个人投资研究参考，<b style="color:#e0c878">不构成投资建议</b>。研究框架学习自查理·芒格的多元思维模型理论，错误和偏见归研究者本人。</p>
+</div>
+
+<div class="idx-game-link">
+  <a href="games/snake/">贪吃蛇 — 经典街机小游戏，手机触屏也能玩</a>
+</div>
+
+</div>

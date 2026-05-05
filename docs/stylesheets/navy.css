@@ -1,239 +1,485 @@
 /*
- * Investment Lab — 海军蓝主题
- * 设计语言：Bloomberg Terminal × McKinsey Report
+ * 投资严论 · The Rigorous Investor — 海军蓝主题 v2.0
+ * 设计语言：Bloomberg Terminal × McKinsey Report × Editorial Design
  */
 
+/* ================================================================
+   1. 配色体系
+   ================================================================ */
+
 :root {
-  /* 配色体系 */
+  --navy-950: #060d1a;
   --navy-900: #0a1628;
+  --navy-850: #0c1a30;
   --navy-800: #0d1f35;
   --navy-700: #112840;
   --navy-600: #163553;
+  --navy-500: #1a4266;
   --steel:     #4a90d9;
+  --steel-bright: #64b5f6;
   --steel-dim: #357abd;
   --gold:      #c9a95c;
+  --gold-bright: #e0c878;
+  --gold-dim: #8a7038;
+  --gold-pale: rgba(201,169,92,0.08);
   --ice:       #e8edf2;
   --ice-dim:   #b0bec5;
   --positive:  #2ecc71;
+  --positive-dim: #27ae60;
   --negative:  #e74c3c;
+  --negative-dim: #c0392b;
 }
 
-/* ===== 全局底色 ===== */
+/* ================================================================
+   2. 全局底色
+   ================================================================ */
+
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color:             var(--navy-900);
-  --md-default-bg-color--light:      var(--navy-800);
-  --md-default-bg-color--lighter:    var(--navy-700);
-  --md-default-bg-color--lightest:   var(--navy-600);
+  --md-default-bg-color:             var(--navy-950);
+  --md-default-bg-color--light:      var(--navy-900);
+  --md-default-bg-color--lighter:    var(--navy-800);
+  --md-default-bg-color--lightest:   var(--navy-700);
   --md-default-fg-color:             var(--ice);
   --md-default-fg-color--light:      var(--ice-dim);
   --md-default-fg-color--lighter:    #8a9bb5;
   --md-default-fg-color--lightest:   #5c6e84;
-
-  /* 主色调 */
   --md-primary-fg-color:             var(--steel);
-  --md-primary-fg-color--light:      #64b5f6;
+  --md-primary-fg-color--light:      var(--steel-bright);
   --md-primary-fg-color--dark:       var(--steel-dim);
-
-  /* 强调色（链接、按钮等） */
   --md-accent-fg-color:              var(--steel);
-  --md-accent-fg-color--transparent: rgba(74, 144, 217, 0.12);
-
-  /* 代码块 */
-  --md-code-bg-color:                var(--navy-900);
+  --md-accent-fg-color--transparent: rgba(74,144,217,0.12);
+  --md-code-bg-color:                var(--navy-950);
   --md-code-fg-color:                var(--ice);
-  --md-code-hl-color:                rgba(74, 144, 217, 0.15);
-
-  /* 表格 */
+  --md-code-hl-color:                rgba(74,144,217,0.15);
   --md-typeset-table-color:          var(--navy-600);
   --md-typeset-table-color--light:   var(--navy-500);
-
-  /* 引用块 */
   --md-admonition-bg-color:          var(--navy-800);
   --md-admonition-fg-color:          var(--ice);
 }
 
-/* ===== 顶部导航栏 ===== */
-.md-header {
-  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
-  border-bottom: 1px solid rgba(74, 144, 217, 0.15);
+/* Background texture */
+[data-md-color-scheme="slate"] .md-main__inner {
+  background:
+    radial-gradient(ellipse 60% 40% at 50% -5%, rgba(74,144,217,0.03) 0%, transparent 60%),
+    var(--navy-950);
 }
 
-/* ===== 侧边栏 ===== */
+/* ================================================================
+   3. 顶部导航栏
+   ================================================================ */
+
+.md-header {
+  background: linear-gradient(180deg, rgba(10,22,40,0.98) 0%, rgba(13,31,53,0.98) 100%);
+  border-bottom: 1px solid rgba(74,144,217,0.12);
+  backdrop-filter: blur(12px);
+}
+
+.md-header__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-tabs {
+  background: rgba(10,22,40,0.95);
+  border-bottom: 1px solid rgba(74,144,217,0.08);
+}
+
+.md-tabs__link {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.md-tabs__link--active {
+  color: var(--gold) !important;
+  font-weight: 600;
+}
+
+/* ================================================================
+   4. 侧边栏
+   ================================================================ */
+
 .md-sidebar {
-  background: var(--navy-800);
+  background: var(--navy-900);
+}
+
+.md-nav__title {
+  color: var(--ice-dim) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .md-nav__link {
   color: var(--ice-dim);
-  transition: color 0.15s;
+  font-size: 13.5px;
+  transition: color 0.18s, background 0.18s;
+  border-radius: 0 4px 4px 0;
 }
+
 .md-nav__link:hover {
-  color: var(--steel);
+  color: var(--steel-bright);
+  background: rgba(74,144,217,0.05);
 }
+
 .md-nav__link--active {
   color: var(--steel) !important;
   font-weight: 600;
+  background: rgba(74,144,217,0.07);
 }
 
-/* 侧边栏当前项背景 */
 .md-nav__item--active > .md-nav__link {
-  background: rgba(74, 144, 217, 0.08);
-  border-right: 2px solid var(--steel);
+  border-right: 2px solid var(--gold);
+  background: rgba(201,169,92,0.06);
 }
 
-/* ===== 主内容区 ===== */
-.md-main__inner {
-  background: var(--navy-900);
+/* Section headers in sidebar */
+.md-nav__item--section > .md-nav__link {
+  font-weight: 600;
+  color: var(--ice);
+  letter-spacing: 0.02em;
 }
 
-/* ===== 标题层级 — 严格 Markdown：加粗加大 ===== */
+/* ================================================================
+   5. 标题层级
+   ================================================================ */
+
 .md-typeset h1 {
   color: var(--ice);
-  font-weight: 900;
+  font-weight: 800;
   font-size: 2.0em;
-  letter-spacing: -0.02em;
-  border-bottom: 2px solid rgba(74, 144, 217, 0.25);
-  padding-bottom: 0.4em;
-  margin-top: 1.2em;
-  margin-bottom: 0.6em;
+  letter-spacing: -0.025em;
+  border-bottom: 2px solid rgba(74,144,217,0.2);
+  padding-bottom: 0.35em;
+  margin-top: 0.6em;
+  margin-bottom: 0.55em;
 }
 
 .md-typeset h2 {
   color: var(--ice);
-  font-weight: 800;
-  font-size: 1.55em;
-  border-left: 4px solid var(--steel);
+  font-weight: 700;
+  font-size: 1.5em;
+  border-left: 3px solid var(--steel);
   padding-left: 0.7em;
   margin-top: 1.4em;
   margin-bottom: 0.5em;
+  letter-spacing: -0.01em;
 }
 
 .md-typeset h3 {
-  color: var(--steel);
-  font-weight: 700;
-  font-size: 1.22em;
+  color: var(--steel-bright);
+  font-weight: 600;
+  font-size: 1.18em;
   margin-top: 1.2em;
   margin-bottom: 0.4em;
+  letter-spacing: -0.005em;
 }
 
 .md-typeset h4 {
   color: var(--ice-dim);
-  font-weight: 700;
-  font-size: 1.05em;
-  margin-top: 1.0em;
+  font-weight: 600;
+  font-size: 1.04em;
+  margin-top: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.9em;
 }
 
-/* 粗体文本 — 更醒目 */
-.md-typeset strong {
-  color: var(--ice);
-  font-weight: 800;
-}
+/* ================================================================
+   6. 正文排版
+   ================================================================ */
 
-/* 段落间距 */
-.md-typeset p {
-  margin-bottom: 0.9em;
+.md-typeset {
+  font-size: 0.95rem;
   line-height: 1.75;
 }
 
-/* 列表项 */
-.md-typeset li {
-  margin-bottom: 0.3em;
-  line-height: 1.7;
+.md-typeset p {
+  margin-bottom: 0.95em;
+  line-height: 1.8;
 }
 
-/* 水平分割线 */
+.md-typeset strong {
+  color: var(--ice);
+  font-weight: 700;
+}
+
+.md-typeset li {
+  margin-bottom: 0.35em;
+  line-height: 1.75;
+}
+
 .md-typeset hr {
   border: none;
-  border-top: 1px solid rgba(74, 144, 217, 0.15);
+  border-top: 1px solid rgba(74,144,217,0.12);
   margin: 2em 0;
+  position: relative;
 }
 
-/* ===== 表格 ===== */
+.md-typeset hr::after {
+  content: '◆';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gold);
+  font-size: 8px;
+  background: var(--navy-950);
+  padding: 0 12px;
+}
+
+/* ================================================================
+   7. 表格 — 金融终端风格
+   ================================================================ */
+
 .md-typeset table:not([class]) {
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  font-size: 0.88em;
+  border: 1px solid var(--navy-600);
+}
+
+.md-typeset table:not([class]) thead {
+  border-bottom: 2px solid var(--steel);
 }
 
 .md-typeset table:not([class]) th {
-  background: var(--navy-700);
-  border-bottom: 2px solid var(--steel);
-  color: var(--steel);
+  background: linear-gradient(180deg, var(--navy-700), var(--navy-800));
+  color: var(--gold);
   font-weight: 600;
+  font-size: 0.82em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 12px 16px;
 }
 
 .md-typeset table:not([class]) td {
-  border-bottom: 1px solid var(--navy-600);
+  border-bottom: 1px solid rgba(74,144,217,0.06);
+  padding: 10px 16px;
 }
 
-.md-typeset table:not([class]) tr:hover td {
-  background: rgba(74, 144, 217, 0.06);
+.md-typeset table:not([class]) tbody tr {
+  transition: background 0.2s;
 }
 
-/* ===== 引用块 ===== */
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background: rgba(74,144,217,0.02);
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background: rgba(74,144,217,0.07);
+}
+
+/* ================================================================
+   8. 引用块
+   ================================================================ */
+
 .md-typeset blockquote {
-  border-left: 3px solid var(--steel);
-  background: rgba(74, 144, 217, 0.06);
+  border-left: 2px solid var(--gold);
+  background: var(--gold-pale);
   border-radius: 0 6px 6px 0;
+  padding: 16px 22px;
+  font-style: italic;
+  color: var(--ice-dim);
+  margin: 1.2em 0;
 }
 
-/* ===== 代码块 ===== */
+.md-typeset blockquote strong {
+  color: var(--gold-bright);
+}
+
+/* ================================================================
+   9. 代码块 — 终端风格
+   ================================================================ */
+
 .md-typeset code {
-  background: var(--navy-800);
-  border-radius: 4px;
+  background: rgba(74,144,217,0.08);
+  color: var(--steel-bright);
+  border-radius: 3px;
   padding: 0.15em 0.45em;
-  font-size: 0.9em;
+  font-size: 0.88em;
+  border: 1px solid rgba(74,144,217,0.1);
 }
 
 .md-typeset pre > code {
   border-radius: 8px;
-  border: 1px solid var(--navy-600);
+  border: 1px solid rgba(74,144,217,0.12);
+  background: var(--navy-950) !important;
+  padding: 18px 20px;
+  font-size: 0.85em;
+  line-height: 1.6;
 }
 
-/* ===== 链接 ===== */
+/* ================================================================
+   10. 链接
+   ================================================================ */
+
 .md-typeset a {
   color: var(--steel);
-  border-bottom: 1px dotted rgba(74, 144, 217, 0.3);
-  transition: border-color 0.15s;
-}
-.md-typeset a:hover {
-  color: #64b5f6;
-  border-bottom-color: #64b5f6;
+  border-bottom: 1px dotted rgba(74,144,217,0.25);
+  transition: border-color 0.2s, color 0.2s;
+  text-decoration: none;
 }
 
-/* ===== 搜索框 ===== */
+.md-typeset a:hover {
+  color: var(--steel-bright);
+  border-bottom-color: var(--steel-bright);
+}
+
+.md-typeset a[href$=".md"]::after {
+  content: ' →';
+  font-size: 0.85em;
+  opacity: 0.5;
+}
+
+/* ================================================================
+   11. 警告/提示框 — 自定义配色
+   ================================================================ */
+
+.md-typeset .admonition {
+  border-radius: 6px;
+  border: 1px solid rgba(74,144,217,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.md-typeset .admonition.note {
+  border-left: 3px solid var(--steel);
+}
+
+.md-typeset .admonition.warning {
+  border-left: 3px solid var(--gold);
+}
+
+.md-typeset .admonition.danger {
+  border-left: 3px solid var(--negative);
+}
+
+.md-typeset .admonition.success {
+  border-left: 3px solid var(--positive);
+}
+
+.md-typeset .admonition.quote {
+  border-left: 3px solid var(--gold);
+}
+
+/* ================================================================
+   12. 搜索框
+   ================================================================ */
+
 .md-search__input {
-  background: var(--navy-700) !important;
+  background: var(--navy-800) !important;
   border-radius: 6px !important;
   color: var(--ice) !important;
+  border: 1px solid rgba(74,144,217,0.1);
+  transition: border-color 0.2s;
 }
+
+.md-search__input:focus {
+  border-color: var(--steel);
+}
+
 .md-search__input::placeholder {
   color: var(--ice-dim) !important;
 }
 
-/* ===== 底部 ===== */
+.md-search-result__link {
+  transition: background 0.15s;
+}
+
+.md-search-result__link:hover {
+  background: rgba(74,144,217,0.06);
+}
+
+/* ================================================================
+   13. 底部
+   ================================================================ */
+
 .md-footer {
-  background: var(--navy-900);
-  border-top: 1px solid rgba(74, 144, 217, 0.1);
+  background: var(--navy-950);
+  border-top: 1px solid rgba(74,144,217,0.08);
+  color: var(--ice-dim);
+  font-size: 0.8em;
 }
 
-/* ===== 滚动条 ===== */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--navy-800);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--navy-600);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--steel-dim);
+.md-footer-meta {
+  background: var(--navy-950);
 }
 
-/* ===== 选中文字 ===== */
+/* ================================================================
+   14. 自定义滚动条
+   ================================================================ */
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--navy-900); }
+::-webkit-scrollbar-thumb { background: var(--navy-600); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--steel-dim); }
+
+/* ================================================================
+   15. 选中文字
+   ================================================================ */
+
 ::selection {
-  background: rgba(74, 144, 217, 0.25);
-  color: var(--ice);
+  background: rgba(201,169,92,0.2);
+  color: var(--gold-bright);
+}
+
+/* ================================================================
+   16. 图片
+   ================================================================ */
+
+.md-typeset img {
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  border: 1px solid rgba(74,144,217,0.08);
+}
+
+/* ================================================================
+   17. 平滑滚动 & 过渡
+   ================================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.md-content {
+  animation: contentFadeIn 0.5s ease;
+}
+
+@keyframes contentFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================================================
+   18. 特殊页面：首页
+   ================================================================ */
+
+.md-typeset h1:first-child {
+  font-family: Georgia, 'Noto Serif SC', 'Songti SC', serif;
+  font-weight: 400;
+  font-size: 2.6em;
+  letter-spacing: -0.03em;
+  border-bottom-color: rgba(201,169,92,0.25);
+}
+
+/* ================================================================
+   19. 响应式
+   ================================================================ */
+
+@media (max-width: 768px) {
+  .md-typeset h1 { font-size: 1.6em; }
+  .md-typeset h2 { font-size: 1.25em; }
+  .md-typeset table:not([class]) { font-size: 0.78em; }
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td { padding: 8px 10px; }
+}
+
+/* ================================================================
+   20. 打印
+   ================================================================ */
+
+@media print {
+  .md-header, .md-sidebar, .md-footer { display: none !important; }
+  .md-typeset { color: #000; }
+  .md-typeset a { color: #000; }
 }
