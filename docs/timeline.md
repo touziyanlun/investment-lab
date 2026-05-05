@@ -10,6 +10,7 @@
 
 | 报告 | 类型 | 路径 |
 |------|:----:|------|
+| 五一假期宏观深度复盘 | 宏观 | [:octicons-link-external-16:](research/macro-mayday-2026-05.md) |
 | 澜起科技 (688008) 深度研究 | 个股 | [:octicons-link-external-16:](research/montage-688008-deep-dive-2026-05.md) |
 | 阿里巴巴 (9988.HK) 深度研究 | 个股 | [:octicons-link-external-16:](research/alibaba-baba-deep-dive-2026-05.md) |
 
@@ -55,9 +56,9 @@
 
 | 类别 | 数量 |
 |------|:----:|
-| 宏观快报 | 1 |
+| 宏观快报 | 2 |
 | 行业分析 | 3 |
 | 投资组合 | 3 |
 | 事件分析 | 1 |
 | 个股深度研究 | 16 |
-| **合计** | **24** |
+| **合计** | **25** |
