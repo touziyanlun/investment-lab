@@ -13,15 +13,185 @@ from pathlib import Path
 from html import escape
 
 
+def _inline_format(text: str) -> str:
+    """处理 Markdown 内联格式：加粗、斜体、行内代码、链接。"""
+    # 转义 HTML 但保留我们将注入的标签
+    text = escape(text)
+
+    # 加粗 **text**
+    text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
+
+    # 斜体 *text*（不误匹配 ** 中的内容）
+    text = re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"<em>\1</em>", text)
+
+    # 行内代码 `text`
+    text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
+
+    # 链接 [text](url)
+    text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', text)
+
+    # 图片 ![alt](url) — 公众号需手动上传，留占位标记
+    text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", r'<span style="color:#888;">[图片：\1 — 请手动上传]</span>', text)
+
+    return text
+
+
+def _parse_table(lines: list, start: int) -> str:
+    """解析 Markdown 表格，返回公众号兼容的 HTML table。"""
+    table_lines = []
+    i = start
+    while i < len(lines) and "|" in lines[i]:
+        table_lines.append(lines[i])
+        i += 1
+
+    if len(table_lines) < 2:
+        return "<p>" + escape(" | ".join(t.strip("|").split("|"))) + "</p>"
+
+    header_line = table_lines[0]
+    separator = table_lines[1]
+
+    if not re.match(r"^[\|\s\-:]+$", separator.strip()):
+        return "<p>" + escape(" | ".join(t.strip("|").split("|"))) + "</p>"
+
+    alignments = []
+    for cell in separator.strip("|").split("|"):
+        cell = cell.strip()
+        if cell.startswith(":") and cell.endswith(":"):
+            alignments.append("center")
+        elif cell.endswith(":"):
+            alignments.append("right")
+        else:
+            alignments.append("left")
+
+    headers = [c.strip() for c in header_line.strip("|").split("|")]
+    while len(alignments) < len(headers):
+        alignments.append("left")
+
+    th_cells = "".join(
+        f'<th style="text-align:{alignments[j] if j < len(alignments) else "left"};">{_inline_format(h)}</th>'
+        for j, h in enumerate(headers)
+    )
+    thead = f"<thead><tr>{th_cells}</tr></thead>"
+
+    tbody_rows = []
+    for row_line in table_lines[2:]:
+        cells = [c.strip() for c in row_line.strip("|").split("|")]
+        while len(cells) < len(headers):
+            cells.append("")
+        td_cells = "".join(
+            f'<td style="text-align:{alignments[j] if j < len(alignments) else "left"};">{_inline_format(cells[j])}</td>'
+            for j in range(len(headers))
+        )
+        tbody_rows.append(f"<tr>{td_cells}</tr>")
+    tbody = f"<tbody>{''.join(tbody_rows)}</tbody>"
+
+    return f'<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%;">{thead}{tbody}</table>'
+
+
 def md_to_wechat(md_text: str) -> str:
     """将 Markdown 文本转换为公众号兼容的 HTML。"""
     lines = md_text.split("\n")
     result = []
     i = 0
-    while i < len(lines):
+    n = len(lines)
+
+    while i < n:
         line = lines[i]
-        # 由后续 Task 逐个实现处理逻辑
+        stripped = line.strip()
+
+        # 跳过 frontmatter (--- 包裹的 YAML)
+        if i == 0 and stripped == "---":
+            i += 1
+            while i < n and lines[i].strip() != "---":
+                i += 1
+            i += 1  # 跳过闭合的 ---
+            continue
+
+        # 空行
+        if not stripped:
+            result.append("<br>")
+            i += 1
+            continue
+
+        # 代码块
+        if stripped.startswith("```"):
+            code_lines = []
+            i += 1
+            while i < n and not lines[i].strip().startswith("```"):
+                code_lines.append(escape(lines[i]))
+                i += 1
+            i += 1  # 跳过闭合 ```
+            code_text = "\n".join(code_lines)
+            result.append(f"<pre><code>{code_text}</code></pre>")
+            continue
+
+        # 表格（最少需要下一行做分隔符判断）
+        if "|" in stripped and i + 1 < n and re.match(r"^[\|\s\-:]+$", lines[i + 1].strip()):
+            table_html = _parse_table(lines, i)
+            result.append(table_html)
+            while i < n and "|" in lines[i]:
+                i += 1
+            continue
+
+        # 标题 H1
+        if re.match(r"^# (.+)", stripped):
+            text = _inline_format(re.match(r"^# (.+)", stripped).group(1))
+            result.append(f"<h1>{text}</h1>")
+            i += 1
+            continue
+
+        # 标题 H2
+        if re.match(r"^## (.+)", stripped):
+            text = _inline_format(re.match(r"^## (.+)", stripped).group(1))
+            result.append(f"<h2>{text}</h2>")
+            i += 1
+            continue
+
+        # 标题 H3
+        if re.match(r"^### (.+)", stripped):
+            text = _inline_format(re.match(r"^### (.+)", stripped).group(1))
+            result.append(f"<h3>{text}</h3>")
+            i += 1
+            continue
+
+        # 分隔线
+        if stripped == "---":
+            result.append("<hr>")
+            i += 1
+            continue
+
+        # 引用块
+        if stripped.startswith(">"):
+            text = _inline_format(stripped[1:].strip())
+            result.append(f"<blockquote><p>{text}</p></blockquote>")
+            i += 1
+            continue
+
+        # 无序列表
+        if re.match(r"^- (.+)", stripped):
+            result.append("<ul>")
+            while i < n and re.match(r"^- (.+)", lines[i].strip()):
+                text = _inline_format(re.match(r"^- (.+)", lines[i].strip()).group(1))
+                result.append(f"<li>{text}</li>")
+                i += 1
+            result.append("</ul>")
+            continue
+
+        # 有序列表
+        if re.match(r"^\d+\. (.+)", stripped):
+            result.append("<ol>")
+            while i < n and re.match(r"^\d+\. (.+)", lines[i].strip()):
+                text = _inline_format(re.match(r"^\d+\. (.+)", lines[i].strip()).group(1))
+                result.append(f"<li>{text}</li>")
+                i += 1
+            result.append("</ol>")
+            continue
+
+        # 普通段落
+        text = _inline_format(stripped)
+        result.append(f"<p>{text}</p>")
         i += 1
+
     return "\n".join(result)
 
 
