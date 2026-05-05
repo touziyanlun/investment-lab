@@ -27,11 +27,11 @@ def _inline_format(text: str) -> str:
     # 行内代码 `text`
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
 
+    # 图片 ![alt](url) — 公众号需手动上传，留占位标记（必须在链接之前处理）
+    text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", r'<span style="color:#888;">[图片：\1 — 请手动上传]</span>', text)
+
     # 链接 [text](url)
     text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', text)
-
-    # 图片 ![alt](url) — 公众号需手动上传，留占位标记
-    text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", r'<span style="color:#888;">[图片：\1 — 请手动上传]</span>', text)
 
     return text
 

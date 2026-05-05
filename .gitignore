@@ -34,3 +34,6 @@ Thumbs.db
 *.secret
 .claude/*
 !.claude/commands/
+
+# WeChat publish output
+*.wechat.html
