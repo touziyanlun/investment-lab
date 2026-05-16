@@ -168,6 +168,7 @@
 <tbody>
 <tr><td>事件</td><td>特朗普访华（5.13-15）— 八维框架+行业深度影响</td><td><a href="../research/trump-china-visit-2026-05/">→</a></td></tr>
 <tr><td>行业</td><td>美光访华与中芯扩产 — 双面棋局深度分析</td><td><a href="../research/micron-smic-china-expansion-2026-05/">→</a></td></tr>
+<tr><td>宏观</td><td>W20 周度深度报告（5.11-16）</td><td><a href="../research/weekly-briefing-2026-05-16/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -258,7 +259,7 @@
 
 <div class="tl-stats">
   <div class="tl-stat">
-    <div class="tl-stat-num">3</div>
+    <div class="tl-stat-num">4</div>
     <div class="tl-stat-label">宏观快报</div>
   </div>
   <div class="tl-stat">
