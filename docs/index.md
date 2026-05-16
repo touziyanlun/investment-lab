@@ -35,6 +35,61 @@
     margin: 0 0 8px 0 !important;
   }
   .idx-hero-sub {
+
+  /* 最新研究模块 */
+  .idx-latest {
+    margin: 0 0 28px;
+    animation: idxFadeUp 0.6s ease 0.1s both;
+  }
+  .idx-latest-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .idx-latest-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .idx-latest-card {
+    background: rgba(74,144,217,0.05);
+    border: 1px solid rgba(74,144,217,0.10);
+    border-radius: 4px;
+    padding: 14px 16px;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: block;
+  }
+  .idx-latest-card:hover {
+    background: rgba(74,144,217,0.10);
+    border-color: rgba(74,144,217,0.20);
+  }
+  .idx-latest-card-tag {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .idx-latest-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ice) !important;
+    margin: 0 0 4px;
+    line-height: 1.3;
+    border: none !important;
+    padding: 0 !important;
+  }
+  .idx-latest-card p {
+    font-size: 10px;
+    color: var(--ice-dim);
+    margin: 0;
+    line-height: 1.4;
+  }
+  @media (max-width: 768px) {
+    .idx-latest-row { grid-template-columns: 1fr; }
+  }
     font-size: 15px;
     color: var(--ice-dim);
     letter-spacing: 0.01em;
@@ -246,13 +301,34 @@
   <div class="idx-hero-sub">多资产长期价值投资独立研究</div>
 </div>
 
+<div class="idx-latest">
+  <div class="idx-latest-label">最新研究</div>
+  <div class="idx-latest-row">
+    <a class="idx-latest-card" href="research/eight-dimension-framework/">
+      <div class="idx-latest-card-tag">策略框架 · 5月17日</div>
+      <h4>八维投资分析体系</h4>
+      <p>商业模式→护城河→竞争→周期→估值→管理层→Pre-mortem</p>
+    </a>
+    <a class="idx-latest-card" href="research/macro-dashboard-2026-05/">
+      <div class="idx-latest-card-tag">宏观快报 · 5月17日</div>
+      <h4>宏观仪表盘（5月）</h4>
+      <p>中美35项核心指标一览 · 三滤镜🟡谨慎中性</p>
+    </a>
+    <a class="idx-latest-card" href="research/s-curve-timing-system-2026-05/">
+      <div class="idx-latest-card-tag">策略框架 · 5月17日</div>
+      <h4>渗透率 S 曲线择时体系</h4>
+      <p>甜蜜区5%→30% · 七大当前赛道定位</p>
+    </a>
+  </div>
+</div>
+
 <div class="idx-stats">
   <div class="idx-stat">
-    <div class="idx-stat-num">25</div>
+    <div class="idx-stat-num">44</div>
     <div class="idx-stat-label">深度研报</div>
   </div>
   <div class="idx-stat">
-    <div class="idx-stat-num">30+</div>
+    <div class="idx-stat-num">50+</div>
     <div class="idx-stat-label">覆盖标的</div>
   </div>
   <div class="idx-stat">
