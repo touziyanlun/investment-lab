@@ -166,7 +166,7 @@
 <table class="tl-table">
 <thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
 <tbody>
-<tr><td>事件</td><td>特朗普访华（5.13-15）— 八维框架+行业深度影响</td><td><a href="research/trump-china-visit-2026-05.md">→</a></td></tr>
+<tr><td>事件</td><td>特朗普访华（5.13-15）— 八维框架+行业深度影响</td><td><a href="../research/trump-china-visit-2026-05/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -176,8 +176,8 @@
 <table class="tl-table">
 <thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
 <tbody>
-<tr><td>事件</td><td>汉坦病毒邮轮疫情 — 安第斯毒株风险评估</td><td><a href="research/hantavirus-cruise-outbreak-2026-05.md">→</a></td></tr>
-<tr><td>宏观</td><td>W19周度宏观快报（5.4-10）</td><td><a href="research/weekly-briefing-2026-05-11.md">→</a></td></tr>
+<tr><td>事件</td><td>汉坦病毒邮轮疫情 — 安第斯毒株风险评估</td><td><a href="../research/hantavirus-cruise-outbreak-2026-05/">→</a></td></tr>
+<tr><td>宏观</td><td>W19周度宏观快报（5.4-10）</td><td><a href="../research/weekly-briefing-2026-05-11/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -187,7 +187,7 @@
 <table class="tl-table">
 <thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
 <tbody>
-<tr><td>组合</td><td>华为哈勃5股组合 — 国产替代×硬科技</td><td><a href="research/huawei-hubble-portfolio-2026-05.md">→</a></td></tr>
+<tr><td>组合</td><td>华为哈勃5股组合 — 国产替代×硬科技</td><td><a href="../research/huawei-hubble-portfolio-2026-05/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -197,10 +197,10 @@
 <table class="tl-table">
 <thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
 <tbody>
-<tr><td>宏观</td><td>五一假期宏观深度复盘</td><td><a href="research/macro-mayday-2026-05.md">→</a></td></tr>
-<tr><td>行业</td><td>CPU 涨价周期深度分析</td><td><a href="research/cpu-price-cycle-analysis-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>澜起科技 (688008) 深度研究</td><td><a href="research/montage-688008-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>阿里巴巴 (9988.HK) 深度研究</td><td><a href="research/alibaba-baba-deep-dive-2026-05.md">→</a></td></tr>
+<tr><td>宏观</td><td>五一假期宏观深度复盘</td><td><a href="../research/macro-mayday-2026-05/">→</a></td></tr>
+<tr><td>行业</td><td>CPU 涨价周期深度分析</td><td><a href="../research/cpu-price-cycle-analysis-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>澜起科技 (688008) 深度研究</td><td><a href="../research/montage-688008-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>阿里巴巴 (9988.HK) 深度研究</td><td><a href="../research/alibaba-baba-deep-dive-2026-05/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -210,8 +210,8 @@
 <table class="tl-table">
 <thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
 <tbody>
-<tr><td>行业</td><td>全球存储产业链</td><td><a href="research/global-storage-industry-full-chain-analysis-2026-05.md">→</a></td></tr>
-<tr><td>行业</td><td>国产 GPU 全面对比</td><td><a href="research/china-gpu-comprehensive-comparison-2026-05.md">→</a></td></tr>
+<tr><td>行业</td><td>全球存储产业链</td><td><a href="../research/global-storage-industry-full-chain-analysis-2026-05/">→</a></td></tr>
+<tr><td>行业</td><td>国产 GPU 全面对比</td><td><a href="../research/china-gpu-comprehensive-comparison-2026-05/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -221,7 +221,7 @@
 <table class="tl-table">
 <thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
 <tbody>
-<tr><td>事件</td><td>2026年巴菲特股东大会</td><td><a href="research/buffett-brk-2026-shareholder-meeting.md">→</a></td></tr>
+<tr><td>事件</td><td>2026年巴菲特股东大会</td><td><a href="../research/buffett-brk-2026-shareholder-meeting/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -231,24 +231,24 @@
 <table class="tl-table">
 <thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
 <tbody>
-<tr><td>个股</td><td>台积电 TSMC (TSM) 深度研究</td><td><a href="research/tsmc-tsm-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>英伟达 NVIDIA (NVDA) 深度研究</td><td><a href="research/nvidia-nvda-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>谷歌 Google (GOOGL) 深度研究</td><td><a href="research/google-googl-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>闪迪 SanDisk (SNDK) 深度研究</td><td><a href="research/sandisk-sndk-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>美光科技 Micron (MU) 深度研究</td><td><a href="research/micron-mu-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>SK海力士 (000660) 深度研究</td><td><a href="research/sk-hynix-000660-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>三星电子 (005930) 深度研究</td><td><a href="research/samsung-005930-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>中际旭创 (300308) 深度研究</td><td><a href="research/zhongji-innolight-300308-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>中芯国际 (0981.HK) 深度研究</td><td><a href="research/smic-0981hk-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>华虹半导体 (1347.HK) 深度研究</td><td><a href="research/huahong-1347hk-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>贵州茅台 (600519) 深度研究</td><td><a href="research/moutai-600519-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>海光信息 (688041) 深度研究</td><td><a href="research/hygon-688041-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>个股</td><td>摩尔线程 (688795) 深度研究</td><td><a href="research/moore-threads-688795-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>行业</td><td>全球半导体赛道9家</td><td><a href="research/semiconductor-sector-deep-dive-2026-05.md">→</a></td></tr>
-<tr><td>组合</td><td>AI智能体20成长股</td><td><a href="research/ai-agent-20-portfolio-2026-05.md">→</a></td></tr>
-<tr><td>组合</td><td>国产算力10股</td><td><a href="research/domestic-computing-10-portfolio-2026-05.md">→</a></td></tr>
-<tr><td>组合</td><td>红利组合</td><td><a href="research/dividend-portfolio-2026-05.md">→</a></td></tr>
-<tr><td>宏观</td><td>2026年5月宏观快报</td><td><a href="research/macro-briefing-2026-05.md">→</a></td></tr>
+<tr><td>个股</td><td>台积电 TSMC (TSM) 深度研究</td><td><a href="../research/tsmc-tsm-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>英伟达 NVIDIA (NVDA) 深度研究</td><td><a href="../research/nvidia-nvda-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>谷歌 Google (GOOGL) 深度研究</td><td><a href="../research/google-googl-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>闪迪 SanDisk (SNDK) 深度研究</td><td><a href="../research/sandisk-sndk-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>美光科技 Micron (MU) 深度研究</td><td><a href="../research/micron-mu-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>SK海力士 (000660) 深度研究</td><td><a href="../research/sk-hynix-000660-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>三星电子 (005930) 深度研究</td><td><a href="../research/samsung-005930-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>中际旭创 (300308) 深度研究</td><td><a href="../research/zhongji-innolight-300308-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>中芯国际 (0981.HK) 深度研究</td><td><a href="../research/smic-0981hk-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>华虹半导体 (1347.HK) 深度研究</td><td><a href="../research/huahong-1347hk-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>贵州茅台 (600519) 深度研究</td><td><a href="../research/moutai-600519-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>海光信息 (688041) 深度研究</td><td><a href="../research/hygon-688041-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>个股</td><td>摩尔线程 (688795) 深度研究</td><td><a href="../research/moore-threads-688795-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>行业</td><td>全球半导体赛道9家</td><td><a href="../research/semiconductor-sector-deep-dive-2026-05/">→</a></td></tr>
+<tr><td>组合</td><td>AI智能体20成长股</td><td><a href="../research/ai-agent-20-portfolio-2026-05/">→</a></td></tr>
+<tr><td>组合</td><td>国产算力10股</td><td><a href="../research/domestic-computing-10-portfolio-2026-05/">→</a></td></tr>
+<tr><td>组合</td><td>红利组合</td><td><a href="../research/dividend-portfolio-2026-05/">→</a></td></tr>
+<tr><td>宏观</td><td>2026年5月宏观快报</td><td><a href="../research/macro-briefing-2026-05/">→</a></td></tr>
 </tbody>
 </table>
 </div>
