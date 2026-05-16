@@ -169,6 +169,9 @@
 <tr><td>策略</td><td>八维投资分析体系 — 方法论总纲（策略框架 #1）</td><td><a href="../research/eight-dimension-framework/">→</a></td></tr>
 <tr><td>策略</td><td>仓位管理与风控六原则（策略框架 #2）</td><td><a href="../research/position-management-2026-05/">→</a></td></tr>
 <tr><td>策略</td><td>渗透率 S 曲线择时体系（策略框架 #3）</td><td><a href="../research/s-curve-timing-system-2026-05/">→</a></td></tr>
+<tr><td>宏观</td><td>宏观仪表盘（5月数据）</td><td><a href="../research/macro-dashboard-2026-05/">→</a></td></tr>
+<tr><td>宏观</td><td>宏观三重滤镜方法论</td><td><a href="../research/macro-triple-filter-2026-05/">→</a></td></tr>
+<tr><td>宏观</td><td>美联储追踪 #1（5月FOMC纪要前瞻）</td><td><a href="../research/fed-tracker-2026-05/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -271,7 +274,7 @@
 
 <div class="tl-stats">
   <div class="tl-stat">
-    <div class="tl-stat-num">4</div>
+    <div class="tl-stat-num">7</div>
     <div class="tl-stat-label">宏观快报</div>
   </div>
   <div class="tl-stat">
