@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://touziyanlun.github.io/investment-lab/sitemap.xml

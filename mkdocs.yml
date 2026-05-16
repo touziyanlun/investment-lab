@@ -1,9 +1,20 @@
 site_name: 投资严论 · The Rigorous Investor
-site_description: 多资产长期价值投资独立研究 — 遵循芒格多元思维模型与巴菲特价值投资理念
+site_description: 投资严论 — 多资产长期价值投资独立研究平台。遵循查理·芒格多元思维模型与巴菲特价值投资理念，覆盖A股、港股、美股，专注半导体、AI、消费、能源赛道。
 site_url: https://touziyanlun.github.io/investment-lab/
+site_author: 投资严论
 repo_name: touziyanlun/investment-lab
 repo_url: https://github.com/touziyanlun/investment-lab
 edit_uri: ""
+
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # 替换为实际 Google Analytics ID
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/touziyanlun/investment-lab
+  search:
+    language: zh
 
 theme:
   name: material
