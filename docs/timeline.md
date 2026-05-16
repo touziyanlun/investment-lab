@@ -109,7 +109,7 @@
 
   .tl-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1px;
     background: rgba(74,144,217,0.06);
     border: 1px solid rgba(74,144,217,0.08);
@@ -162,11 +162,43 @@
 <h2>2026年5月</h2>
 
 <div class="tl-day-group">
+<h3>5月16日</h3>
+<table class="tl-table">
+<thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
+<tbody>
+<tr><td>事件</td><td>特朗普访华（5.13-15）— 八维框架+行业深度影响</td><td><a href="research/trump-china-visit-2026-05.md">→</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tl-day-group">
+<h3>5月11日</h3>
+<table class="tl-table">
+<thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
+<tbody>
+<tr><td>事件</td><td>汉坦病毒邮轮疫情 — 安第斯毒株风险评估</td><td><a href="research/hantavirus-cruise-outbreak-2026-05.md">→</a></td></tr>
+<tr><td>宏观</td><td>W19周度宏观快报（5.4-10）</td><td><a href="research/weekly-briefing-2026-05-11.md">→</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tl-day-group">
+<h3>5月10日</h3>
+<table class="tl-table">
+<thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
+<tbody>
+<tr><td>组合</td><td>华为哈勃5股组合 — 国产替代×硬科技</td><td><a href="research/huawei-hubble-portfolio-2026-05.md">→</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tl-day-group">
 <h3>5月5日</h3>
 <table class="tl-table">
 <thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
 <tbody>
 <tr><td>宏观</td><td>五一假期宏观深度复盘</td><td><a href="research/macro-mayday-2026-05.md">→</a></td></tr>
+<tr><td>行业</td><td>CPU 涨价周期深度分析</td><td><a href="research/cpu-price-cycle-analysis-2026-05.md">→</a></td></tr>
 <tr><td>个股</td><td>澜起科技 (688008) 深度研究</td><td><a href="research/montage-688008-deep-dive-2026-05.md">→</a></td></tr>
 <tr><td>个股</td><td>阿里巴巴 (9988.HK) 深度研究</td><td><a href="research/alibaba-baba-deep-dive-2026-05.md">→</a></td></tr>
 </tbody>
@@ -225,20 +257,24 @@
 
 <div class="tl-stats">
   <div class="tl-stat">
-    <div class="tl-stat-num">2</div>
+    <div class="tl-stat-num">3</div>
     <div class="tl-stat-label">宏观快报</div>
   </div>
   <div class="tl-stat">
-    <div class="tl-stat-num">4</div>
+    <div class="tl-stat-num">5</div>
     <div class="tl-stat-label">行业分析</div>
   </div>
   <div class="tl-stat">
-    <div class="tl-stat-num">3</div>
+    <div class="tl-stat-num">4</div>
     <div class="tl-stat-label">投资组合</div>
   </div>
   <div class="tl-stat">
-    <div class="tl-stat-num">16</div>
+    <div class="tl-stat-num">15</div>
     <div class="tl-stat-label">个股深度</div>
+  </div>
+  <div class="tl-stat">
+    <div class="tl-stat-num">3</div>
+    <div class="tl-stat-label">事件分析</div>
   </div>
 </div>
 
