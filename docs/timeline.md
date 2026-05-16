@@ -168,6 +168,7 @@
 <tbody>
 <tr><td>策略</td><td>八维投资分析体系 — 方法论总纲（策略框架 #1）</td><td><a href="../research/eight-dimension-framework/">→</a></td></tr>
 <tr><td>策略</td><td>仓位管理与风控六原则（策略框架 #2）</td><td><a href="../research/position-management-2026-05/">→</a></td></tr>
+<tr><td>策略</td><td>渗透率 S 曲线择时体系（策略框架 #3）</td><td><a href="../research/s-curve-timing-system-2026-05/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -290,7 +291,7 @@
     <div class="tl-stat-label">事件分析</div>
   </div>
   <div class="tl-stat">
-    <div class="tl-stat-num">2</div>
+    <div class="tl-stat-num">3</div>
     <div class="tl-stat-label">策略框架</div>
   </div>
 </div>
