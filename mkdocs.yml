@@ -62,7 +62,6 @@ markdown_extensions:
 plugins:
   - search:
       lang: zh
-      placeholder: 搜索研究报告、标的代码、赛道关键词…
       separator: '[\s​\-、，。；：？！]+'
 
 nav:
