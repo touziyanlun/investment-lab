@@ -109,7 +109,7 @@
 
   .tl-stats {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1px;
     background: rgba(74,144,217,0.06);
     border: 1px solid rgba(74,144,217,0.08);
@@ -160,6 +160,16 @@
 
 <div class="tl-month" style="animation-delay:0.08s">
 <h2>2026年5月</h2>
+
+<div class="tl-day-group">
+<h3>5月17日</h3>
+<table class="tl-table">
+<thead><tr><th>类型</th><th>报告</th><th>链接</th></tr></thead>
+<tbody>
+<tr><td>策略</td><td>八维投资分析体系 — 方法论总纲（策略框架 #1）</td><td><a href="../research/eight-dimension-framework/">→</a></td></tr>
+</tbody>
+</table>
+</div>
 
 <div class="tl-day-group">
 <h3>5月16日</h3>
@@ -277,6 +287,10 @@
   <div class="tl-stat">
     <div class="tl-stat-num">3</div>
     <div class="tl-stat-label">事件分析</div>
+  </div>
+  <div class="tl-stat">
+    <div class="tl-stat-num">1</div>
+    <div class="tl-stat-label">策略框架</div>
   </div>
 </div>
 
