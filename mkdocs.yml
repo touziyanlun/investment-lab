@@ -123,5 +123,5 @@ nav:
       - 澜起科技 (688008): research/montage-688008-deep-dive-2026-05.md
   - 小游戏:
       - 游戏中心: games/index.md
-      - 贪吃蛇: games/snake/index.html
+      - 贪吃蛇: games/snake.md
   - 关于本站: about.md
