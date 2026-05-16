@@ -20,30 +20,29 @@ theme:
   name: material
   language: zh
   palette:
-    - scheme: default
-      primary: red
-      accent: red
-      toggle:
-        icon: material/weather-night
-        name: 深色模式
     - scheme: slate
-      primary: red
-      accent: red
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-7
         name: 浅色模式
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 深色模式
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.tracking
     - navigation.sections
     - navigation.top
-    - navigation.tracking
     - search.suggest
     - search.highlight
     - content.code.copy
 
 extra_css:
-  - stylesheets/red.css
+  - stylesheets/navy.css
   - stylesheets/print.css
 
 markdown_extensions:
@@ -68,53 +67,61 @@ plugins:
 
 nav:
   - 首页:
-      - 研究地图: research-map.md
-      - 更新时间线: timeline.md
       - 关于本站: index.md
-  - 宏观与策略:
+      - 更新时间线: timeline.md
+      - 研究地图: research-map.md
+  - 策略框架:
       - 八维投资分析体系: research/eight-dimension-framework.md
       - 仓位管理与风控六原则: research/position-management-2026-05.md
       - 渗透率 S 曲线择时体系: research/s-curve-timing-system-2026-05.md
-      - 宏观三重滤镜方法论: research/macro-triple-filter-2026-05.md
+  - 宏观快报:
       - 宏观仪表盘（5月）: research/macro-dashboard-2026-05.md
-      - W20周度深度(5.11-16): research/weekly-briefing-2026-05-16.md
-      - W19周度快报(5.4-10): research/weekly-briefing-2026-05-11.md
-      - 2026年5月宏观快报: research/macro-briefing-2026-05.md
-      - 五一假期深度复盘: research/macro-mayday-2026-05.md
+      - 宏观三重滤镜方法论: research/macro-triple-filter-2026-05.md
       - 美联储追踪（5月FOMC）: research/fed-tracker-2026-05.md
-  - 赛道与组合:
+      - 2026年5月: research/macro-briefing-2026-05.md
+      - W19周度快报(5.4-10): research/weekly-briefing-2026-05-11.md
+      - W20周度深度(5.11-16): research/weekly-briefing-2026-05-16.md
+      - 五一假期深度复盘: research/macro-mayday-2026-05.md
+  - 投资组合:
+      - AI智能体20成长股: research/ai-agent-20-portfolio-2026-05.md
+      - 国产算力10股: research/domestic-computing-10-portfolio-2026-05.md
+      - 红利组合: research/dividend-portfolio-2026-05.md
+      - 华为哈勃5股: research/huawei-hubble-portfolio-2026-05.md
+  - 赛道研究:
       - 全球半导体赛道9家: research/semiconductor-sector-deep-dive-2026-05.md
       - 全球存储产业链: research/global-storage-industry-full-chain-analysis-2026-05.md
       - 国产 GPU 全面对比: research/china-gpu-comprehensive-comparison-2026-05.md
       - CPU 涨价周期: research/cpu-price-cycle-analysis-2026-05.md
       - 美光访华与中芯扩产: research/micron-smic-china-expansion-2026-05.md
-      - 消费行业框架: research/consumer-sector-framework-2026-05.md
-      - 金融行业框架: research/financial-sector-framework-2026-05.md
-      - 新能源车产业链: research/ev-industry-chain-2026-05.md
+      - 消费行业框架（白酒/乳品/调味品/家电）: research/consumer-sector-framework-2026-05.md
+      - 金融行业框架（银行与保险）: research/financial-sector-framework-2026-05.md
+      - 新能源车产业链（电池/整车/智驾）: research/ev-industry-chain-2026-05.md
       - 医疗器械行业框架: research/medical-device-framework-2026-05.md
-      - AI 存储超级周期: research/ai-storage-supercycle-2026-05.md
-      - 华为哈勃生态与国产替代: research/huawei-hubble-ecosystem-2026-05.md
-      - AI智能体20成长股: research/ai-agent-20-portfolio-2026-05.md
-      - 国产算力10股: research/domestic-computing-10-portfolio-2026-05.md
-      - 华为哈勃5股: research/huawei-hubble-portfolio-2026-05.md
-      - 红利组合: research/dividend-portfolio-2026-05.md
       - ETF 绩效与指数相关性: analysis.md
-  - 事件与个股:
-      - 特朗普访华（5.13-15）: research/trump-china-visit-2026-05.md
-      - 汉坦病毒邮轮疫情: research/hantavirus-cruise-outbreak-2026-05.md
+  - 新兴技术研究:
+      - AI 存储超级周期（HBM+DDR5+SSD）: research/ai-storage-supercycle-2026-05.md
+      - 华为哈勃生态与国产替代: research/huawei-hubble-ecosystem-2026-05.md
+  - 事件分析:
       - 2026年巴菲特股东大会: research/buffett-brk-2026-shareholder-meeting.md
+      - 汉坦病毒邮轮疫情: research/hantavirus-cruise-outbreak-2026-05.md
+      - 特朗普访华（5.13-15）: research/trump-china-visit-2026-05.md
+  - 个股研究:
       - 台积电 TSMC (TSM): research/tsmc-tsm-deep-dive-2026-05.md
       - 英伟达 NVIDIA (NVDA): research/nvidia-nvda-deep-dive-2026-05.md
+      - 谷歌 Google (GOOGL): research/google-googl-deep-dive-2026-05.md
+      - 闪迪 SanDisk (SNDK): research/sandisk-sndk-deep-dive-2026-05.md
+      - 美光科技 Micron (MU): research/micron-mu-deep-dive-2026-05.md
+      - SK海力士 (000660): research/sk-hynix-000660-deep-dive-2026-05.md
+      - 三星电子 (005930): research/samsung-005930-deep-dive-2026-05.md
+      - 中际旭创 (300308): research/zhongji-innolight-300308-deep-dive-2026-05.md
+      - 中芯国际 (0981.HK): research/smic-0981hk-deep-dive-2026-05.md
+      - 华虹半导体 (1347.HK): research/huahong-1347hk-deep-dive-2026-05.md
+      - 贵州茅台 (600519): research/moutai-600519-deep-dive-2026-05.md
       - 海光信息 (688041): research/hygon-688041-deep-dive-2026-05.md
       - 摩尔线程 (688795): research/moore-threads-688795-deep-dive-2026-05.md
-      - 澜起科技 (688008): research/montage-688008-deep-dive-2026-05.md
-      - SK海力士 (000660): research/sk-hynix-000660-deep-dive-2026-05.md
-      - 更多个股（搜索）: research/nvidia-nvda-deep-dive-2026-05.md
-      - 中芯国际 (0981.HK): research/smic-0981hk-deep-dive-2026-05.md
-      - 中际旭创 (300308): research/zhongji-innolight-300308-deep-dive-2026-05.md
-      - 贵州茅台 (600519): research/moutai-600519-deep-dive-2026-05.md
       - 阿里巴巴 (9988.HK): research/alibaba-baba-deep-dive-2026-05.md
-  - 更多:
-      - 贪吃蛇: games/snake.md
+      - 澜起科技 (688008): research/montage-688008-deep-dive-2026-05.md
+  - 小游戏:
       - 游戏中心: games/index.md
-      - 关于本站: about.md
+      - 贪吃蛇: games/snake.md
+  - 关于本站: about.md
