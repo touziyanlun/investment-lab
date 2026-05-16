@@ -298,7 +298,7 @@
 <div class="idx-hero">
   <div class="idx-hero-tag">The Rigorous Investor</div>
   <h1>投资严论</h1>
-  <div class="idx-hero-sub">多资产长期价值投资独立研究</div>
+  <div class="idx-hero-sub">多资产长期价值投资独立研究 · 按 <kbd>Ctrl+K</kbd> 搜索全部报告 · <kbd>Ctrl+P</kbd> 导出 PDF</div>
 </div>
 
 <div class="idx-latest">
