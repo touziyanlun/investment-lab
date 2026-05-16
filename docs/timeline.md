@@ -172,6 +172,8 @@
 <tr><td>宏观</td><td>宏观仪表盘（5月数据）</td><td><a href="../research/macro-dashboard-2026-05/">→</a></td></tr>
 <tr><td>宏观</td><td>宏观三重滤镜方法论</td><td><a href="../research/macro-triple-filter-2026-05/">→</a></td></tr>
 <tr><td>宏观</td><td>美联储追踪 #1（5月FOMC纪要前瞻）</td><td><a href="../research/fed-tracker-2026-05/">→</a></td></tr>
+<tr><td>赛道</td><td>消费行业框架（白酒/乳品/调味品/家电）</td><td><a href="../research/consumer-sector-framework-2026-05/">→</a></td></tr>
+<tr><td>赛道</td><td>金融行业框架（银行与保险）</td><td><a href="../research/financial-sector-framework-2026-05/">→</a></td></tr>
 </tbody>
 </table>
 </div>
@@ -278,8 +280,8 @@
     <div class="tl-stat-label">宏观快报</div>
   </div>
   <div class="tl-stat">
-    <div class="tl-stat-num">6</div>
-    <div class="tl-stat-label">行业分析</div>
+    <div class="tl-stat-num">8</div>
+    <div class="tl-stat-label">赛道研究</div>
   </div>
   <div class="tl-stat">
     <div class="tl-stat-num">4</div>
